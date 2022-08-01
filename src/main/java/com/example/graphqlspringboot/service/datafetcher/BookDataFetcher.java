@@ -17,6 +17,6 @@ public class BookDataFetcher implements DataFetcher<Optional<Book>> {
 
     @Override
     public Optional<Book> get(DataFetchingEnvironment environment) throws Exception {
-        return bookRepository.findOne(environment.getArgument("id"));
+        return bookRepository.findById(environment.getArgument("id"));
     }
 }
